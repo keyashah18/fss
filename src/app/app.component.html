@@ -1,0 +1,26 @@
+<div>
+  <div class="card" style="width: 25rem; margin: 10rem auto;">
+    <div class="card-body">
+      <h5 class="card-title">Typing Challenge</h5>
+      
+    <p class="card-text">
+      <span *ngFor="let r1 of randomText.split('');let vada=index;" [class]="compare(r1,enteredText[vada])">
+    
+        <!--({{r1}} | {{enteredText[vada]}})-->
+        
+         {{r1}}
+        
+
+
+      </span>
+      
+      
+      {{randomText}}</p>
+
+      <input class="form-control" #input (input)="userInput(input.value)">
+      <br>
+      <a href="#" class="btn btn-primary">Generate text</a>
+    </div>
+  </div>
+</div>  
+ 
